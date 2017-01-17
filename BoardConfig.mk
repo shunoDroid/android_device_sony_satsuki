@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2016 The CyanogenMod Project
+# Copyright (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,7 +15,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/sony/sumire
+DEVICE_PATH := device/sony/satsuki
 
 TARGET_SPECIFIC_HEADER_PATH += $(DEVICE_PATH)/include
 
@@ -24,7 +25,7 @@ BOARD_VENDOR := sony
 TARGET_USE_SDCLANG := true
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := E6633,E6653,sumire,sumire_dsds
+TARGET_OTA_ASSERT_DEVICE := E6853,E6883,satsuki,satsuki_dsds
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8994
@@ -62,7 +63,7 @@ BOARD_RAMDISK_OFFSET := 0x02000000
 TARGET_KERNEL_APPEND_DTB := true
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_CONFIG := kitakami_sumire_defconfig
+TARGET_KERNEL_CONFIG := kitakami_satsuki_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 TARGET_KERNEL_SOURCE := kernel/sony/msm8994
 
@@ -165,4 +166,4 @@ WPA_SUPPLICANT_VERSION      := VER_0_8_X
 WIFI_BUS := PCIE
 
 # Inherit from the proprietary version
--include vendor/sony/sumire/BoardConfigVendor.mk
+-include vendor/sony/satsuki/BoardConfigVendor.mk

@@ -18,12 +18,12 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from sumire device
-$(call inherit-product, device/sony/sumire/device.mk)
+# Inherit from satsuki device
+$(call inherit-product, device/sony/satsuki/device.mk)
 
 # Set those variables here to overwrite the inherited values.
 PRODUCT_BRAND := Sony
-PRODUCT_NAME := full_sumire
+PRODUCT_NAME := full_satsuki
 PRODUCT_MANUFACTURER := Sony
-PRODUCT_DEVICE := sumire
-PRODUCT_MODEL := Xperia Z5
+PRODUCT_DEVICE := satsuki
+PRODUCT_MODEL := Xperia Z5 Premium

@@ -50,7 +50,7 @@ EOF
 
 LOCAL_PATH := \$(call my-dir)
 
-ifeq (\$(TARGET_DEVICE),sumire)
+ifeq (\$(TARGET_DEVICE),satsuki)
 
 include \$(CLEAR_VARS)
 LOCAL_MODULE := libtime_genoff

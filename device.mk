@@ -15,7 +15,7 @@
 #
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/sony/sumire/sumire-vendor.mk)
+$(call inherit-product, vendor/sony/satsuki/satsuki-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -119,7 +119,7 @@ PRODUCT_PACKAGES += \
 
 # NFC config
 PRODUCT_PACKAGES += \
-    nfc_nci.sumire
+    nfc_nci.satsuki
 
 # Multihal
 PRODUCT_PACKAGES += \

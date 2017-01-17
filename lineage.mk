@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2015 The CyanogenMod Project
+# Copyright (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,16 +15,16 @@
 # limitations under the License.
 #
 
-$(call inherit-product, device/sony/sumire/full_sumire.mk)
+$(call inherit-product, device/sony/satsuki/full_satsuki.mk)
 
 # Inherit some common CM stuff
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_sumire
+PRODUCT_NAME := lineage_satsuki
 
 # Use the latest approved GMS identifiers
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=sumire \
-    BUILD_FINGERPRINT=Sony/sumire/sumire:6.0.1/KITAKAMI-2.1.2-SEC-161031-1748/1:user/dev-keys \
-    PRIVATE_BUILD_DESC="sumire-user 6.0.1 KITAKAMI-2.1.2-SEC-161031-1748 1 dev-keys"
+    PRODUCT_NAME=satsuki \
+    BUILD_FINGERPRINT=Sony/satsuki/satsuki:6.0.1/KITAKAMI-2.1.2-SEC-161031-1748/1:user/dev-keys \
+    PRIVATE_BUILD_DESC="satsuki-user 6.0.1 KITAKAMI-2.1.2-SEC-161031-1748 1 dev-keys"
