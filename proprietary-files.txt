@@ -844,30 +844,14 @@ lib/libidd.so
 -vendor/lib64/libtime_genoff.so
 
 # Touchscreen
-etc/firmware/touch_module_id_0x01.img
-etc/firmware/touch_module_id_0x07.img
-etc/firmware/touch_module_id_0x1d.img
-etc/firmware/touch_module_id_0x27.img
-etc/firmware/touch_module_id_0xa1.img
-etc/firmware/touch_module_id_0x22.img
-etc/firmware/touch_module_id_0x03.img
-etc/firmware/touch_module_id_0x2b.img
-etc/firmware/touch_module_id_0x1e.img
-etc/firmware/touch_module_id_0x08.img
-etc/firmware/touch_module_id_0x1b.img
-etc/firmware/touch_module_id_0x1f.img
-etc/firmware/touch_module_id_0x26.img
-etc/firmware/touch_module_id_0x2a.img
-etc/firmware/touch_module_id_0xa0.img
-etc/firmware/touch_module_id_0x1a.img
-etc/firmware/touch_module_id_0x20.img
-etc/firmware/touch_module_id_0x02.img
-etc/firmware/touch_module_id_0x23.img
-etc/firmware/touch_module_id_0x1c.img
-etc/firmware/touch_module_id_0x05.img
-etc/firmware/touch_module_id_0x04.img
-etc/firmware/touch_module_id_0x06.img
-etc/firmware/touch_module_id_0x21.img
+etc/firmware/touch_module_id_0x60.img
+etc/firmware/touch_module_id_0x61.img
+etc/firmware/touch_module_id_0x6a.img
+etc/firmware/touch_module_id_0x6b.img
+etc/firmware/touch_module_id_0x70.img
+etc/firmware/touch_module_id_0x71.img
+etc/firmware/touch_module_id_0x7a.img
+etc/firmware/touch_module_id_0x7b.img
 etc/touch_fw_update.sh
 
 # Wifi
