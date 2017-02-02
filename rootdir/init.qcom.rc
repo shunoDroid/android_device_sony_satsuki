@@ -66,7 +66,7 @@ on init
     write /sys/bus/msm_subsys/devices/subsys1/restart_level "RELATED"
     # wcnss ssr
     write /sys/bus/msm_subsys/devices/subsys2/restart_level "RELATED"
-
+v
     # Create a tmpfs for dynamic network mounting
     mkdir /storage/removable/remote 0700 root system
     mount tmpfs tmpfs /storage/removable/remote mode=0755,uid=0,gid=0
@@ -423,12 +423,12 @@ service cnd /system/bin/cnd
     class main
     socket cnd stream 660 root inet
 
-service irsc_util /system/bin/irsc_util "/etc/sec_config"
+service irsc_util /system/vendor/bin/irsc_util "/etc/sec_config"
     class main
     user root
     oneshot
 
-service sensors /system/bin/sensors.qcom
+service sensors /system/vendor/bin/sensors.qcom
     class main
     user root
     group sensors radio system
@@ -479,20 +479,20 @@ on property:ro.data.large_tcp_window_size=true
     # Adjust socket buffer to enlarge TCP receive window for high bandwidth (e.g. DO-RevB)
     write /proc/sys/net/ipv4/tcp_adv_win_scale  2
 
-service msm_irqbalance /system/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance.conf
+service msm_irqbalance /system/vendor/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance.conf
     socket msm_irqbalance seqpacket 660 root system
     class main
     user root
     group root
     writepid /dev/cpuset/system-background/tasks
 
-service qcamerasvr /system/bin/mm-qcamera-daemon
+service qcamerasvr /system/vendor/bin/mm-qcamera-daemon
     class late_start
     user camera
     group camera system inet input graphics drmrpc
     writepid /dev/cpuset/camera-daemon/tasks
 
-service qseecomd /system/bin/qseecomd
+service qseecomd /system/vendor/bin/qseecomd
     class core
     user root
     group root
@@ -526,7 +526,7 @@ service adsprpcd /system/bin/adsprpcd
    group media drmrpc
 
 # SONY misc
-service tad_static /system/bin/tad_static /dev/block/bootdevice/by-name/TA 0,16
+service tad_static /system/vendor/bin/tad_static /dev/block/bootdevice/by-name/TA 0,16
     class core
     user root
     group drmrpc
@@ -534,27 +534,27 @@ service tad_static /system/bin/tad_static /dev/block/bootdevice/by-name/TA 0,16
     writepid /dev/cpuset/system-background/tasks
 
 # SONY misc
-service ta_qmi_service /system/bin/ta_qmi_service
+service ta_qmi_service /system/vendor/bin/ta_qmi_service
     class main
     user root
     group wakelock drmrpc
     writepid /dev/cpuset/system-background/tasks
 
 # SONY prop
-service sct_service /system/bin/sct_service
+service sct_service /system/vendor/bin/sct_service
     class main
     user root drmrpc
     writepid /dev/cpuset/system-background/tasks
 
 # SONY prop
-service mlog_qmi_service /system/bin/mlog_qmi_service
+service mlog_qmi_service /system/vendor/bin/mlog_qmi_service
     class main
     user root
     group system wakelock drmrpc
     writepid /dev/cpuset/system-background/tasks
 
 # QCOM prop
-service rmt_storage /system/bin/rmt_storage
+service rmt_storage /system/vendor/bin/rmt_storage
     class core
     user root
     group system wakelock drmrpc
@@ -571,14 +571,14 @@ service ril-daemon2 /system/bin/rild -c 2
     disabled
 
 # QCOM prop
-service qmuxd /system/bin/qmuxd
+service qmuxd /system/vendor/bin/qmuxd
     class main
     user radio
     group radio audio bluetooth wakelock gps nfc diag drmrpc
     writepid /dev/cpuset/system-background/tasks
 
 # QCOM prop
-service netmgrd /system/bin/netmgrd
+service netmgrd /system/vendor/bin/netmgrd
     class main
     group system wakelock
     writepid /dev/cpuset/system-background/tasks
@@ -600,12 +600,12 @@ service charger /charger
     group log
     seclabel u:r:healthd:s0
 
-service per_mgr /system/bin/pm-service
+service per_mgr /system/vendor/bin/pm-service
     class core
     user system
     group system net_raw
 
-service per_proxy /system/bin/pm-proxy
+service per_proxy /system/vendor/bin/pm-proxy
     class core
     user system
     group system net_raw
