@@ -26,5 +26,5 @@ PRODUCT_NAME := lineage_satsuki
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=satsuki \
-    BUILD_FINGERPRINT=Sony/satsuki/satsuki:6.0.1/KITAKAMI-2.1.2-SEC-161031-1748/1:user/dev-keys \
-    PRIVATE_BUILD_DESC="satsuki-user 6.0.1 KITAKAMI-2.1.2-SEC-161031-1748 1 dev-keys"
+    BUILD_FINGERPRINT=Sony/satsuki/satsuki:7.0/KITAKAMI-2.2.0-170123-1244/1:user/dev-keys \
+    PRIVATE_BUILD_DESC="satsuki-user 7.0 KITAKAMI-2.2.0-170123-1244 1 dev-keys"
