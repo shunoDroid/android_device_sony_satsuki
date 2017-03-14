@@ -18,7 +18,8 @@
 $(call inherit-product, device/sony/kitakami-common/device-common.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/sony/kitakami-satsuki/satsuki-vendor.mk)
+#$(call inherit-product, vendor/sony/kitakami-satsuki/satsuki-vendor.mk)
+$(call inherit-product, vendor/sony/satsuki/satsuki-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
