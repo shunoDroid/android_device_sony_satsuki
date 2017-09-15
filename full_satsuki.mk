@@ -1,4 +1,3 @@
-#
 # Copyright 2014 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,9 +11,16 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
-add_lunch_combo aosp_e6853-userdebug
-add_lunch_combo aosp_e6883-userdebug
-add_lunch_combo lineage_satsuki-userdebug
-add_lunch_combo lineage_satsuki_dsds-userdebug
+TARGET_KERNEL_CONFIG := aosp_kitakami_satsuki_defconfig
+
+# Inherit from those products. Most specific first.
+$(call inherit-product, device/sony/satsuki/device.mk)
+$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+
+PRODUCT_NAME := lineage_satsuki
+PRODUCT_DEVICE := satsuki
+PRODUCT_MODEL := Xperia Z5 Premium (AOSP)
+PRODUCT_BRAND := Sony
+PRODUCT_MANUFACTURER := Sony

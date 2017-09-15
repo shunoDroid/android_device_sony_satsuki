@@ -14,4 +14,6 @@
 
 PRODUCT_MAKEFILES := $(LOCAL_DIR)/aosp_e6853.mk \
                      $(LOCAL_DIR)/aosp_e6883.mk
+                     $(LOCAL_DIR)/lineage_satsuki.mk
+                     $(LOCAL_DIR)/lineage_satsuki_dsds.mk
 

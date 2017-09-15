@@ -1,5 +1,4 @@
-#
-# Copyright 2014 The Android Open Source Project
+# Copyright (C) 2017 The shunoDroid Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,9 +11,15 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
-add_lunch_combo aosp_e6853-userdebug
-add_lunch_combo aosp_e6883-userdebug
-add_lunch_combo lineage_satsuki-userdebug
-add_lunch_combo lineage_satsuki_dsds-userdebug
+
+$(call inherit-product, device/sony/satsuki/full_satsuki.mk)
+
+ifeq ($(TARGET_PRODUCT), satsuki_dsds)
+
+$(call inherit-product, device/sony/satsuki/full_satsuki_dsds.mk)
+
+endif
+
+# Inherit some common Lineage stuff.
+$(call inherit-product, vendor/cm/config/common_full_phone.mk)
